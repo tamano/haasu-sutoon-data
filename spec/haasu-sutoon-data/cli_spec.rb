@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Haasu::Sutoon::Data do
+describe HaasuSutoonData do
   it 'has a version number' do
     expect(Haasu::Sutoon::Data::VERSION).not_to be nil
   end

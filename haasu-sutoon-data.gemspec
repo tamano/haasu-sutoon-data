@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'haasu/sutoon/data/version'
+require 'haasu-sutoon-data/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "haasu-sutoon-data"
-  spec.version       = Haasu::Sutoon::Data::VERSION
+  spec.version       = HaasuSutoonData::VERSION
   spec.authors       = ["Yuya TAMANO"]
   spec.email         = ["everfree.main@gmail.com"]
 
