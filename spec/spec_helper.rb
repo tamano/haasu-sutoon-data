@@ -1,2 +1,1 @@
-$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require 'haasu-sutoon-data'
+Dir[File.join(File.dirname(__FILE__), "..", "lib", "**/*.rb")].each{|f| require f }
