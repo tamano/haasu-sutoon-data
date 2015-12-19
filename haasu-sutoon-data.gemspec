@@ -1,13 +1,13 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'haasu-sutoon-data/version'
+require 'haasu_sutoon_data/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "haasu-sutoon-data"
+  spec.name          = 'haasu-sutoon-data'
   spec.version       = HaasuSutoonData::VERSION
-  spec.authors       = ["Yuya TAMANO"]
-  spec.email         = ["everfree.main@gmail.com"]
+  spec.authors       = ['Yuya TAMANO']
+  spec.email         = ['everfree.main@gmail.com']
 
   spec.summary       = 'tool to generate English-Japanese card dictionary from Hearthstonejson.com'
   spec.description   = 'See README.md for more information.'
@@ -21,14 +21,14 @@ Gem::Specification.new do |spec|
   end
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  spec.bindir        = "exe"
-  spec.executables   = ["haasu-sutoon-data"]
-  spec.require_paths = ["lib"]
+  spec.bindir        = 'exe'
+  spec.executables   = ['haasu-sutoon-data']
+  spec.require_paths = ['lib']
 
   spec.add_dependency 'thor'
 
-  spec.add_development_dependency "bundler", "~> 1.11"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency 'bundler', '~> 1.11'
+  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rubocop'
 end

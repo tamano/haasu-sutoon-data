@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'haasu-sutoon-data'
+require 'haasu_sutoon_data'
 
 HaasuSutoonData::CLI.start
