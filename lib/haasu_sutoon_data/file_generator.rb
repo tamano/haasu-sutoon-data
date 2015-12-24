@@ -27,10 +27,9 @@ module HaasuSutoonData
   def self.fetch_card_list(lang)
     puts "Starting #{lang} card data download."
 
-    # jaJP => https://hearthstonejson.com/json/AllSets.jaJP.json
-    # enUS => https://hearthstonejson.com/json/AllSets.json
-    target_lang = (lang == 'enUS') ? '' : ('.' + lang)
-    target_uri = URI("https://hearthstonejson.com/json/AllSets#{target_lang}.json")
+    # jaJP => https://api.hearthstonejson.com/v1/latest/jaJP/cards.json
+    # enUS => https://api.hearthstonejson.com/v1/latest/enUS/cards.json
+    target_uri = URI("https://api.hearthstonejson.com/v1/latest/#{lang}/cards.json")
 
     Net::HTTP.get(target_uri)
   end
@@ -51,12 +50,6 @@ module HaasuSutoonData
   end
 
   def self.create_id_name_hash(json)
-    hash_list = {}
-
-    json.each do |_expantion, cards|
-      hash_list.merge! Hash[*cards.map { |c| [c['id'], c['name']] }.flatten]
-    end
-
-    hash_list
+    Hash[*json.map { |c| [c['id'], c['name']] }.flatten]
   end
 end
