@@ -3,9 +3,9 @@ class HaasuSutoonData::CLI < Thor
   desc \
     'generate {out_file}',
     'Access to Hearthstonejson.com and output English-Japanese cards list in JS Hash style named CardList.'
-  def export(out_file)
-    if error_message
-      puts "output file error: #{error_message}"
+  def generate(out_file)
+    if File.exist?(out_file)
+      puts "#{out_file} already exists"
       exit 1
     end
   end
