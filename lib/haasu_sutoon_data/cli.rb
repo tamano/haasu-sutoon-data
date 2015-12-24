@@ -8,5 +8,7 @@ class HaasuSutoonData::CLI < Thor
       puts "#{out_file} already exists"
       exit 1
     end
+
+    HaasuSutoonData.generate_file(out_file)
   end
 end
