@@ -46,7 +46,9 @@ module HaasuSutoonData
       result << { 'id' => id, 'en_name' => en_name, 'ja_name' => to_list[id] }
     end
 
-    result.sort { |a, b| a['id'] <=> b['id'] }
+    result.sort do |a, b|
+      b['en_name'].size <=> a['en_name'].size
+    end
   end
 
   def self.create_id_name_hash(json)
